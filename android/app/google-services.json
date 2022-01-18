@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "423208337831",
+    "project_id": "flutter--firebase-todolist",
+    "storage_bucket": "flutter--firebase-todolist.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:423208337831:android:3c599ef419e9368fe9b682",
+        "android_client_info": {
+          "package_name": "com.glyphdev.flutter_firebase_todoapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "423208337831-gk3ip65bfmnv78fitmkt90ki05hgmg4a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDX4MLlU70paBh8cmWzpFCaYlKdyrdLqJs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "423208337831-gk3ip65bfmnv78fitmkt90ki05hgmg4a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
