@@ -4,7 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 double defaultMargin = 24.0;
 double defaultRadius = 17.0;
 
-Color kPrimaryColor = Color(0xff142664);
+Color kPrimaryColor = Color(0xffadd0a0);
 Color kBackgroundColor = Color(0xfffafafc);
 Color kBlackColor = Color(0xff0D1931);
 Color kWhiteColor = Color(0xffFFFFFF);

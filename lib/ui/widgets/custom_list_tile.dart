@@ -1,24 +1,27 @@
 part of 'widgets.dart';
 
-class CustomListTile extends StatelessWidget {  final String title;
+class CustomListTile extends StatelessWidget {
+  final String title;
   final String description;
   //// Pointer to Update Function
   final Function? onUpdate;
   //// Pointer to Delete Function
   final Function? onDelete;
 
-  CustomListTile(this.title, this.description, {Key? key, this.onUpdate,  this.onDelete}) : super(key: key);
-
+  CustomListTile(this.title, this.description,
+      {Key? key, this.onUpdate, this.onDelete})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
       margin: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
-      padding: const EdgeInsets.all(5),
+      padding: const EdgeInsets.only(top: 10, bottom: 10, left: 8, right: 8),
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(8),
-          border: Border.all(color: Colors.blue[900]!)),
+        color: kPrimaryColor,
+        borderRadius: BorderRadius.circular(8),
+      ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -28,12 +31,16 @@ class CustomListTile extends StatelessWidget {  final String title;
               SizedBox(
                 width: MediaQuery.of(context).size.width * 0.5,
                 child: Text(title,
-                    style: GoogleFonts.poppins(
-                        fontWeight: FontWeight.w600, fontSize: 16)),
+                    style: blackTextStyle.copyWith(
+                        fontSize: 16, fontWeight: bold),
+                        ),
               ),
-              Text(
-                description,
-                style: GoogleFonts.poppins(),
+              SizedBox(
+                 width: MediaQuery.of(context).size.width * 0.5,
+                child: Text(
+                  description,
+                  style: blackTextStyle.copyWith(color: Colors.black54),
+                ),
               )
             ],
           ),
@@ -44,7 +51,7 @@ class CustomListTile extends StatelessWidget {  final String title;
                 width: 60,
                 child: RaisedButton(
                     shape: CircleBorder(),
-                    color: Colors.green[900],
+                    color: kGreenColor,
                     child: Center(
                         child: Icon(
                       Icons.edit,
@@ -59,7 +66,7 @@ class CustomListTile extends StatelessWidget {  final String title;
                 width: 60,
                 child: RaisedButton(
                     shape: CircleBorder(),
-                    color: Colors.red[900],
+                    color: kRedColor,
                     child: Center(
                         child: Icon(
                       Icons.delete,

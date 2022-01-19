@@ -22,13 +22,16 @@ class _MainPageState extends State<MainPage> {
     String updateId;
 
     return Scaffold(
+      backgroundColor: kBackgroundColor,
       appBar: AppBar(
+        backgroundColor: kPrimaryColor,
         title: Text(widget.title),
       ),
       body: ListView(
         children: [
           StreamBuilder<QuerySnapshot>(
-            stream: db.orderBy('lastEdited').snapshots(),
+            // Order List by item created
+            stream: db.orderBy('timeCreated').snapshots(),
             builder: (_, snapshot) {
               if (snapshot.hasData) {
                 return Column(
@@ -196,7 +199,8 @@ class _MainPageState extends State<MainPage> {
                   ));
         },
         tooltip: 'Add list',
-        child: const Icon(Icons.add),
+        child: Icon(Icons.add),
+        backgroundColor: kPrimaryColor,
       ),
     );
   }
