@@ -30,13 +30,14 @@ class CustomListTile extends StatelessWidget {
             children: [
               SizedBox(
                 width: MediaQuery.of(context).size.width * 0.5,
-                child: Text(title,
-                    style: blackTextStyle.copyWith(
-                        fontSize: 16, fontWeight: bold),
-                        ),
+                child: Text(
+                  title,
+                  style:
+                      blackTextStyle.copyWith(fontSize: 16, fontWeight: bold),
+                ),
               ),
               SizedBox(
-                 width: MediaQuery.of(context).size.width * 0.5,
+                width: MediaQuery.of(context).size.width * 0.5,
                 child: Text(
                   description,
                   style: blackTextStyle.copyWith(color: Colors.black54),
@@ -46,36 +47,20 @@ class CustomListTile extends StatelessWidget {
           ),
           Row(
             children: [
-              SizedBox(
-                height: 40,
-                width: 60,
-                child: RaisedButton(
-                    shape: CircleBorder(),
-                    color: kGreenColor,
-                    child: Center(
-                        child: Icon(
-                      Icons.edit,
-                      color: Colors.white,
-                    )),
-                    onPressed: () {
-                      if (onUpdate != null) onUpdate!();
-                    }),
-              ),
-              SizedBox(
-                height: 40,
-                width: 60,
-                child: RaisedButton(
-                    shape: CircleBorder(),
-                    color: kRedColor,
-                    child: Center(
-                        child: Icon(
-                      Icons.delete,
-                      color: Colors.white,
-                    )),
-                    onPressed: () {
-                      if (onDelete != null) onDelete!();
-                    }),
-              )
+              CustomButtonOpt(
+                  update: true,
+                  icon: Icons.edit,
+                  onPressed: () {
+                    if (onUpdate != null) onUpdate!();
+                  },
+                ),
+              CustomButtonOpt(
+                  update: false,
+                  icon: Icons.delete,
+                  onPressed: () {
+                    if (onDelete != null) onDelete!();
+                  },
+                ),
             ],
           )
         ],
